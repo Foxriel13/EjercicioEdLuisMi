@@ -1,0 +1,47 @@
+package Ejercicio03;
+
+public class Customer {
+	public String name;
+    public String surname;
+    protected int age;
+    private boolean single;
+    private String country;
+
+    public Customer() {
+        // Constructor público vacío
+    }
+
+    public String toString() {
+        return "Customer [name=" + name + ", surname=" + surname + ", age=" + age + ", single=" + single + ", country=" + country + "]";
+    }
+
+    private void doSomething() {
+        // Método privado que hace algo
+        System.out.println("Doing something...");
+    }
+
+    // Métodos getter y setter para los atributos protegidos y privados (no incluidos en el diagrama)
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean isSingle() {
+        return single;
+    }
+
+    public void setSingle(boolean single) {
+        this.single = single;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+}

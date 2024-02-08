@@ -1,0 +1,42 @@
+package Ejercicio06;
+
+public class ManageTasksMemory implements ManageTasks {
+	private List<Task> tasks;
+
+    public ManageTasksMemory() {
+        tasks = new ArrayList<>();
+    }
+
+    public int addTask(String taskText) {
+        int taskId = tasks.size() + 1;
+        Task task = new Task(taskId, taskText);
+        tasks.add(task);
+        return taskId;
+    }
+
+    public void removeTask(int id) {
+        tasks.removeIf(task -> task.getId() == id);
+    }
+
+    public void updateTask(Task task) {
+        for (Task t : tasks) {
+            if (t.getId() == task.getId()) {
+                t.setTaskText(task.getTaskText());
+                break;
+            }
+        }
+    }
+
+    public Task searchTask(int id) {
+        for (Task task : tasks) {
+            if (task.getId() == id) {
+                return task;
+            }
+        }
+        return null;
+    }
+
+    public List<Task> showTasks() {
+        return tasks;
+    }
+}

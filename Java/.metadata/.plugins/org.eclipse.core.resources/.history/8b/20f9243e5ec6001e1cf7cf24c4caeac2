@@ -1,0 +1,22 @@
+package Ejercicio02;
+
+public class Main {
+
+	public static void main(String[] args) {
+	        ListaCompra listaCompra = new ListaCompra();
+	        // Agregar productos a la lista
+	        listaCompra.agregarProducto(new Producto("Leche",2));;
+	        listaCompra.agregarProducto(new Producto("Pan", 2));
+	        listaCompra.agregarProducto(new Producto("Huevos", 12));
+	        
+	        // Ver la lista de compra
+	        listaCompra.verLista();
+	        
+	        // Tachar un producto de la lista
+	        listaCompra.tacharProducto(new Producto("Pan", 2));
+
+	        // Ver la lista de compra actualizada
+	        listaCompra.verLista();
+	    }
+
+}
